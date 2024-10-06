@@ -1,0 +1,22 @@
+---
+const {seccion, id}= Astro.props
+---
+
+<div id={id} class="flex flex-col w-full justify-center font-bold text-white">
+    <span class="text-center text-2xl mt-10">{seccion}</span>
+    <div class="w-full flex justify-center">
+        <div class="line"></div>
+    </div>
+    <slot/>
+
+</div>
+
+<style>
+    .line{
+        margin-top: 10px;
+        width: 80%;
+        height: 1px;
+        border-radius: 25px;
+        border: solid 1px white;
+    }
+</style>
